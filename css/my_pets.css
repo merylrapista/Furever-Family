@@ -1,0 +1,80 @@
+body { font-family: 'Poppins', sans-serif; margin:0; background:#fffaf5; display:flex; }
+
+/* Main content */
+.main-content { flex:1; margin-left:230px; padding:25px 40px; position:relative; }
+header { background:#f0a08a; color:white; padding:18px 25px; border-radius:10px; margin-bottom:25px; }
+header h1 { margin:0; font-size:22px; }
+header p { font-size:13px; }
+/* Status Tabs */
+.tab-btn { padding:6px 12px; border:none; border-radius:6px; cursor:pointer; font-weight:bold; margin-right:10px; background:#f0a08a; color:white; transition:0.3s; }
+.tab-btn.active { background:#d47357; }
+.tab-btn:hover { opacity:0.9; }
+/* Pet grid */
+.pets-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:18px; margin-top:15px; }
+/* Pet card */
+.pet-card { background:white; border-radius:12px; box-shadow:0 3px 8px rgba(0,0,0,0.08); text-align:center; padding:15px; transition:transform 0.3s, box-shadow 0.3s; }
+.pet-card:hover { transform:translateY(-4px); box-shadow:0 5px 12px rgba(0,0,0,0.12); }
+.pet-card img { width:100%; height:150px; object-fit:cover; border-radius:10px; margin-bottom:10px; }
+.pet-card h3 { color:#d47357; margin:5px 0; font-size:16px; }
+.pet-card p { font-size:13px; color:#555; margin:2px 0; }
+/* Status Badge */
+.status-badge { padding:4px 10px; border-radius:8px; font-size:12px; font-weight:bold; display:inline-block; margin-top:5px; }
+.status-badge.available { background:#d4edda; color:#155724; }
+.status-badge.adopted { background:#f8d7da; color:#721c24; }
+/* Buttons in card */
+/* Buttons in Card - improved friendly design */
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+/* Base style for all buttons */
+.btn-group a,
+.btn-group form button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    flex: 1;                 /* make buttons same width */
+    text-align: center;
+}
+
+/* Edit button - friendly green */
+.edit-btn {
+    background: #4caf50;     /* softer green */
+    color: white;
+}
+.edit-btn:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+}
+
+/* Delete button - softer red */
+.delete-btn {
+    background: #f28b82;     /* soft red/pinkish */
+    color: white;
+}
+.delete-btn:hover {
+    background: #e57373;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+}
+
+/* Optional: add subtle border for contrast */
+.btn-group a, .btn-group form button {
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Empty state */
+.no-pets { text-align:center; color:#777; font-size:15px; margin-top:30px; }
+/* Toast */
+.toast { position: fixed; top: 20px; right: 20px; background:#28a745; color:white; padding:12px 20px; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.15); font-size:14px; font-weight:bold; z-index:1000; opacity:0; pointer-events:none; transition: opacity 0.4s ease; }
+.toast.error { background:#dc3545; }
+.toast.show { opacity:1; pointer-events:auto; }

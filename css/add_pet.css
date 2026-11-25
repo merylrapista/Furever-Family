@@ -1,0 +1,68 @@
+body { font-family: 'Poppins',sans-serif; margin:0; background:#fffaf5; display:flex; min-height:100vh; }
+
+/* Main content */
+.main-content { margin-left:230px; padding:25px 40px; flex:1; }
+header { background:#f0a08a; color:white; padding:20px 30px; border-radius:10px; margin-bottom:25px; }
+header h1 { margin:0; font-size:24px; }
+header p { font-size:14px; }
+
+/* Form container */
+.container{
+  background:white;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1);padding:25px 30px;max-width:500px;margin:0 auto;
+}
+.container h2{text-align:center;color:#d47357;margin-bottom:20px;}
+.container input,.container select,.container textarea{width:100%;padding:10px;margin:8px 0;border:1px solid #ccc;border-radius:8px;font-size:14px;}
+.container button{width:100%;padding:12px;margin-top:10px;background:#d47357;color:white;border:none;border-radius:8px;font-weight:bold;cursor:pointer;transition:0.3s;}
+.container button:hover{background:#b85b3f;}
+.back-btn{display:block;text-align:center;margin-top:12px;color:#d47357;text-decoration:none;font-weight:bold;}
+.back-btn:hover{text-decoration:underline;}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    float:left;
+}
+
+.label-text {
+    display: inline-block;   
+    width: 120px;            
+}
+
+.form-actions {
+    display: flex;
+    flex-direction: row;   /* ensures side-by-side */
+    gap: 10px;
+    margin-top: 15px;
+    align-items: center;
+    margin-left: 10px;
+}
+
+/* Buttons share same base sizing behavior */
+.form-actions button {
+    flex: 1;              /* equal width */
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+/* Submit */
+.btn-submit {
+    background: #4CAF50;
+    color: white;
+}
+
+.btn-submit:hover {
+    background: #45a049;
+}
+
+/* Cancel */
+.btn-cancel {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn-cancel:hover {
+    background: #c0392b;
+}

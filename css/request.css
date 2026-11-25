@@ -1,0 +1,92 @@
+body { font-family: 'Poppins', sans-serif; margin:0; background:#fffaf5; }
+
+/* Sidebar */
+.sidebar { width:230px; background:#d47357; color:white; display:flex; flex-direction:column; align-items:center; padding:30px 0; position:fixed; top:0; height:100%; }
+.sidebar h1 { margin-bottom:40px; font-size:30px; font-weight:700; font-family:'Dancing Script', cursive; color:black; }
+.sidebar a { text-decoration:none; color:white; width:80%; background:rgba(255,255,255,0.15); margin:6px 0; padding:12px; border-radius:10px; display:flex; align-items:center; gap:8px; transition: background 0.3s, transform 0.2s; font-weight:500; }
+.sidebar a:hover { background:rgba(255,255,255,0.3); transform:translateY(-2px); }
+.sidebar a.active { background: rgba(255,255,255,0.35); font-weight:bold; box-shadow:0 3px 6px rgba(0,0,0,0.15); }
+.icon { width:20px; height:20px; fill:#000; }
+
+/* Main content */
+.main-content { margin-left:220px; padding:20px 40px; }
+header { background:#f0a08a; color:white; padding:20px; border-radius:10px; margin-bottom:20px; display:flex; justify-content:space-between; align-items:center; }
+header h1 { margin:0; }
+header p { font-size:14px; }
+
+/* Requests Table */
+.requests-table-container { overflow-x:auto; margin-top:15px; }
+
+.requests-table {
+    width:100%;
+    border-collapse: separate;
+    border-spacing:0;
+    font-size:13px;
+    background:#fff;
+    border-radius:10px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+.requests-table thead { background:#d47357; color:white; }
+.requests-table thead th { padding:12px 10px; text-align:center; font-weight:500; }
+
+.requests-table tbody tr { text-align:center; border-bottom:1px solid #eee; }
+.requests-table tbody tr:hover { background:#fff2eb; }
+
+.requests-table tbody td {
+    padding:10px;
+    vertical-align:middle;
+    text-align:center;
+    white-space:nowrap;
+}
+
+/* Pet info */
+.pet-info-cell {
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:10px;
+    min-width: 120px;
+}
+
+.pet-info-cell img {
+    width:50px;
+    height:50px;
+    object-fit:cover;
+    border-radius:6px;
+    flex-shrink:0;
+}
+
+.pet-info-cell span {
+    font-weight:500;
+    display:block;
+}
+
+
+/* Status badges */
+.status { padding:4px 10px; border-radius:6px; font-weight:bold; font-size:12px; color:brown; display:inline-block; min-width:70px; }
+.status.Pending { background:#f0a08a; }
+.status.Approved { background:#28a745; }
+.status.Rejected { background:#dc3545; }
+
+/* Cancel button */
+.cancel-btn {
+    background:#d47357;
+    color:white;
+    border:none;
+    border-radius:6px;
+    padding:8px 14px;
+    font-size:13px;
+    cursor:pointer;
+    min-width:80px;      /* ensures button is visible */
+    display:inline-block; /* prevents collapsing */
+    text-align:center;
+}
+.cancel-btn:hover { background:#b85b3f; }
+
+
+@media(max-width:700px){
+    .requests-table thead th, .requests-table tbody td { padding:8px; font-size:12px; }
+    .pet-info-cell img { width:40px; height:40px; }
+    .cancel-btn { padding:5px 8px; font-size:11px; }
+}
